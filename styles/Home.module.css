@@ -1,27 +1,66 @@
-.container {
-  min-height: 80vh;
-  padding: 0 0.5rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .ytInput {
-  min-height: 5vh;
-  max-height: 5vh;
-  min-width: 80vh;
+  min-height: 40px;
+  max-height: 40px;
+  min-width: 30vw !important;
   border: 1px solid #000;
   border-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  box-sizing: border-box;
 }
 
 .btnSubmit {
   cursor: pointer;
-  min-height: 6vh;
-  max-height: 6vh;
-  min-width: 6vh !important;
-  max-width: 6vh !important;
+  min-height: 40px;
+  max-height: 40px;
+  min-width: 40px !important;
+  max-width: 40px !important;
   padding: 5px;
   background: transparent;
   border: 1px solid #000;
-  border-radius: 50%;
+  border-left: none;
+  border-radius: 10%;
+  border-radius-left: 0;
+  font-size: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  text-align: center;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+form.form {
+  display: flex;
+  align-items: stretch;
+}
+
+.ytInput,
+.btnSubmit {
+  padding: 10px; /* Adjust padding to increase or decrease button size */
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px; /* Adjust font size as needed */
+  flex: 1; /* Distribute space equally */
+}
+
+.btnSubmit {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnSubmit:hover {
+  background-color: #0056b3;
+}
+
+.main{
+  max-width: 40vw;
+  text-align: center;
+  margin: 0 auto;
 }

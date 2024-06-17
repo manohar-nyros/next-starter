@@ -22,7 +22,7 @@ export default function Home() {
   }
 
   const clearVideo = (e) => {
-    if (e.code == "Backspace") {
+    if (e.code == "Backspace" || e.target.value == '') {
       ytVidInputRef.current.value = null;
       setVideo(null);
     }
@@ -36,16 +36,17 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Video Player</h1>
-        <form onSubmit={submitVideo}>
-          <input ref={ytVidInputRef} className={styles.ytInput} type="text" onKeyUp={clearVideo} placeholder="Enter Youtube video URL" autoFocus={true} />&nbsp;
-          <input type="submit" value=">" className={styles.btnSubmit} />
-        </form>
-        <br/>
+        <div className={styles.main}>
+          <h1>Youtube Video Player</h1>
+          <form className={styles.form} onSubmit={submitVideo}>
+            <input ref={ytVidInputRef} className={styles.ytInput} type="text" onKeyUp={clearVideo} placeholder="Enter Youtube video URL" autoFocus={true} />
+            <input type="submit" value=">" className={styles.btnSubmit} />
+          </form>
+        </div>
         <br/>
         {
           video && 
-          <iframe width="420" height="315" src={"https://www.youtube.com/embed/" + video} />
+          <iframe width="950" height="450" src={"https://www.youtube.com/embed/" + video} />
         }
       </main>
     </div>
